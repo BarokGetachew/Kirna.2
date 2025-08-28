@@ -36,13 +36,13 @@ export default function Contact() {
             📧 Get In Touch
           </span>
           <h1 className="text-6xl md:text-7xl font-bold text-foreground mb-8 leading-tight">
-            Let's{" "}
+            Let&apos;s{" "}
             <span className="bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">
               Connect
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Ready to start your next project? Let's discuss how we can bring your vision to life.
+            Ready to start your next project? Let&apos;s discuss how we can bring your vision to life.
           </p>
         </div>
 
@@ -201,14 +201,14 @@ export default function Contact() {
                 🚀 Ready to get started?
               </span>
               <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
-                Let's build something{" "}
+                Let&apos;s build something{" "}
                 <span className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent">
                   amazing
                 </span>{" "}
                 together
               </h2>
               <p className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed">
-                Your next project is just a message away. Let's discuss how we can bring your ideas to life.
+                Your next project is just a message away. Let&apos;s discuss how we can bring your ideas to life.
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <GlassButton className="px-10 py-4 text-lg font-semibold bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 shadow-2xl hover:shadow-purple-500/25">

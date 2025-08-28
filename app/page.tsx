@@ -94,7 +94,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-center space-x-3">
                   <span className="text-green-500">$</span>
-                  <span className="text-foreground">git commit -m "update"</span>
+                  <span className="text-foreground">git commit -m &quot;update&quot;</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <span className="text-green-500">$</span>

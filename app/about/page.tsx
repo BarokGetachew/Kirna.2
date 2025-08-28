@@ -158,7 +158,7 @@ export default function About() {
                 ?
               </h2>
               <p className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed">
-                Let's discuss your project and bring your vision to life.
+                Let&apos;s discuss your project and bring your vision to life.
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <GlassButton className="px-10 py-4 text-lg font-semibold bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 shadow-2xl hover:shadow-purple-500/25">

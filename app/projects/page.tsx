@@ -124,7 +124,7 @@ export default function Projects() {
             <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-blue-500/5 to-cyan-500/5"></div>
             <div className="relative z-10 p-12">
               <span className="inline-block px-4 py-2 bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/20 rounded-full text-sm font-medium text-purple-600 dark:text-purple-400 mb-6">
-                💼 Let's Work Together
+                💼 Let&apos;s Work Together
               </span>
               <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
                 Ready to start your{" "}
@@ -134,7 +134,7 @@ export default function Projects() {
                 ?
               </h2>
               <p className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed">
-                Let's collaborate to bring your ideas to life with cutting-edge technology and innovative design.
+                Let&apos;s collaborate to bring your ideas to life with cutting-edge technology and innovative design.
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <GlassButton className="px-10 py-4 text-lg font-semibold bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 shadow-2xl hover:shadow-purple-500/25">

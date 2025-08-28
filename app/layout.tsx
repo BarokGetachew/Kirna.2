@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Link from 'next/link'
 import '@/styles/globals.css'
 import { ThemeProvider } from '@/lib/theme-provider'
 import { ThemeToggle } from '@/components/ui/theme-toggle'
@@ -48,7 +49,7 @@ export default function RootLayout({
                  <div>
                    <h4 className="font-semibold mb-4 text-foreground">Pages</h4>
                    <ul className="space-y-2">
-                     <li><a href="/" className="text-muted-foreground hover:text-foreground transition-colors">Home</a></li>
+                     <li><Link href="/" className="text-muted-foreground hover:text-foreground transition-colors">Home</Link></li>
                      <li><a href="/about" className="text-muted-foreground hover:text-foreground transition-colors">About</a></li>
                      <li><a href="/projects" className="text-muted-foreground hover:text-foreground transition-colors">Projects</a></li>
                      <li><a href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">Contact</a></li>
