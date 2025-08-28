@@ -19,22 +19,21 @@ export const AnimatedBackground = () => {
         {[...Array(8)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-[4px] h-[400px] bg-gradient-to-b from-transparent via-purple-500/60 to-transparent"
+            className="absolute w-[3px] h-[300px] bg-gradient-to-b from-transparent via-purple-500/80 to-transparent"
             animate={{
-              y: ['-400px', '100vh'],
-              opacity: [0, 0.8, 0],
+              y: [-300, 800],
+              opacity: [0, 1, 0],
             }}
             transition={{
-              duration: 8 + (i * 2),
+              duration: 6 + (i * 1),
               repeat: Infinity,
-              delay: i * 0.8,
+              delay: i * 0.5,
               ease: "linear"
             }}
             style={{
               left: `${(i * 12) + 5}%`,
               top: 0,
-              transform: `rotate(${i * 45}deg)`,
-              zIndex: 1,
+              zIndex: 10,
             }}
           />
         ))}
@@ -43,22 +42,22 @@ export const AnimatedBackground = () => {
         {[...Array(6)].map((_, i) => (
           <motion.div
             key={`diagonal-${i}`}
-            className="absolute w-[3px] h-[500px] bg-gradient-to-b from-transparent via-blue-500/50 to-transparent"
+            className="absolute w-[2px] h-[400px] bg-gradient-to-b from-transparent via-blue-500/70 to-transparent"
             animate={{
-              y: ['-500px', '100vh'],
-              opacity: [0, 0.6, 0],
+              y: [-400, 800],
+              opacity: [0, 0.9, 0],
             }}
             transition={{
-              duration: 10 + (i * 1.5),
+              duration: 8 + (i * 1),
               repeat: Infinity,
-              delay: i * 1.2,
+              delay: i * 0.8,
               ease: "linear"
             }}
             style={{
               left: `${(i * 20) + 15}%`,
               top: 0,
-              transform: `rotate(${30 + (i * 25)}deg)`,
-              zIndex: 1,
+              transform: `rotate(${30 + (i * 15)}deg)`,
+              zIndex: 10,
             }}
           />
         ))}
@@ -67,22 +66,21 @@ export const AnimatedBackground = () => {
         {[...Array(5)].map((_, i) => (
           <motion.div
             key={`vertical-${i}`}
-            className="absolute w-[2px] h-[800px] bg-gradient-to-b from-transparent via-cyan-500/40 to-transparent"
+            className="absolute w-[2px] h-[600px] bg-gradient-to-b from-transparent via-cyan-500/60 to-transparent"
             animate={{
-              y: ['-800px', '100vh'],
-              opacity: [0, 0.5, 0],
+              y: [-600, 800],
+              opacity: [0, 0.8, 0],
             }}
             transition={{
-              duration: 12 + (i * 2),
+              duration: 10 + (i * 1.5),
               repeat: Infinity,
-              delay: i * 1.5,
+              delay: i * 1.2,
               ease: "linear"
             }}
             style={{
               left: `${(i * 25) + 5}%`,
               top: 0,
-              transform: `rotate(${90}deg)`,
-              zIndex: 1,
+              zIndex: 10,
             }}
           />
         ))}
