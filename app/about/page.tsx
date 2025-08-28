@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { GlassCard, GlassButton, AnimatedBackground } from "@/components/ui/aceternity-ui";
-import AboutContent from "@/content/about.mdx";
 
 export default function About() {
   return (
@@ -26,10 +25,33 @@ export default function About() {
           </p>
         </div>
 
-        {/* MDX Content */}
+        {/* About Content */}
         <GlassCard className="p-10 mb-16">
           <div className="prose prose-lg dark:prose-invert max-w-none">
-            <AboutContent />
+            <h2 className="text-3xl font-bold mb-6 text-foreground">About kirna.dev</h2>
+            <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
+              Welcome to <strong>kirna.dev</strong> – where modern web development meets innovation.
+            </p>
+            <h3 className="text-2xl font-bold mb-4 text-foreground mt-8">Our Mission</h3>
+            <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
+              We&apos;re building the future of web development, one component at a time. Our approach focuses on creating maintainable, scalable applications that are ready for real-world deployment and future growth.
+            </p>
+            <h3 className="text-2xl font-bold mb-4 text-foreground mt-8">Our Stack</h3>
+            <ul className="list-disc list-inside text-lg text-muted-foreground space-y-2 mb-4">
+              <li><strong>Next.js 15</strong> with App Router</li>
+              <li><strong>TypeScript</strong> for type safety</li>
+              <li><strong>Tailwind CSS</strong> for styling</li>
+              <li><strong>shadcn/ui</strong> components</li>
+              <li><strong>Framer Motion</strong> for animations</li>
+            </ul>
+            <h3 className="text-2xl font-bold mb-4 text-foreground mt-8">What We Do</h3>
+            <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
+              At kirna.dev, we specialize in creating modern, fast, and responsive websites using cutting-edge technologies. Our approach focuses on building maintainable, scalable applications that are ready for real-world deployment and future growth.
+            </p>
+            <h3 className="text-2xl font-bold mb-4 text-foreground mt-8">Get Started</h3>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Ready to build something amazing? Let&apos;s discuss your project and bring your vision to life.
+            </p>
           </div>
         </GlassCard>
 
