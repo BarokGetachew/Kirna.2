@@ -14,16 +14,16 @@ export const AnimatedBackground = () => {
       <div className="absolute right-0 top-1/4 h-[300px] w-[300px] rounded-full bg-gradient-to-r from-pink-500/10 to-purple-500/10 opacity-20 blur-[100px] animate-pulse delay-1000"></div>
       <div className="absolute left-0 bottom-1/4 h-[250px] w-[250px] rounded-full bg-gradient-to-r from-green-500/10 to-emerald-500/10 opacity-25 blur-[80px] animate-pulse delay-2000"></div>
       
-      {/* Premium animated streaks - now visible */}
+      {/* Premium animated streaks - distributed across full height */}
       <div className="absolute inset-0 overflow-hidden">
-        {[...Array(6)].map((_, i) => (
+        {[...Array(8)].map((_, i) => (
           <div
             key={i}
-            className="absolute w-[4px] h-[500px] bg-gradient-to-b from-transparent via-purple-500/60 to-transparent animate-pulse"
+            className="absolute w-[4px] h-[400px] bg-gradient-to-b from-transparent via-purple-500/60 to-transparent animate-pulse"
             style={{
-              left: `${(i * 18)}%`,
-              top: '-250px',
-              transform: `rotate(${i * 30}deg)`,
+              left: `${(i * 12) + 5}%`,
+              top: `${(i * 15) - 10}%`,
+              transform: `rotate(${i * 45}deg)`,
               animationDelay: `${i * 0.5}s`,
               zIndex: 1,
             }}
@@ -31,15 +31,30 @@ export const AnimatedBackground = () => {
         ))}
         
         {/* Additional diagonal streaks for more visibility */}
-        {[...Array(4)].map((_, i) => (
+        {[...Array(6)].map((_, i) => (
           <div
             key={`diagonal-${i}`}
-            className="absolute w-[3px] h-[600px] bg-gradient-to-b from-transparent via-blue-500/50 to-transparent animate-pulse"
+            className="absolute w-[3px] h-[500px] bg-gradient-to-b from-transparent via-blue-500/50 to-transparent animate-pulse"
             style={{
-              left: `${(i * 25) + 10}%`,
-              top: '-300px',
-              transform: `rotate(${45 + (i * 15)}deg)`,
+              left: `${(i * 20) + 15}%`,
+              top: `${(i * 20) - 15}%`,
+              transform: `rotate(${30 + (i * 25)}deg)`,
               animationDelay: `${i * 0.8}s`,
+              zIndex: 1,
+            }}
+          />
+        ))}
+        
+        {/* Vertical streaks for full coverage */}
+        {[...Array(5)].map((_, i) => (
+          <div
+            key={`vertical-${i}`}
+            className="absolute w-[2px] h-[800px] bg-gradient-to-b from-transparent via-cyan-500/40 to-transparent animate-pulse"
+            style={{
+              left: `${(i * 25) + 5}%`,
+              top: '-100px',
+              transform: `rotate(${90}deg)`,
+              animationDelay: `${i * 1.2}s`,
               zIndex: 1,
             }}
           />
