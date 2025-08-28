@@ -14,20 +14,20 @@ export const AnimatedBackground = () => {
       <div className="absolute right-0 top-1/4 h-[300px] w-[300px] rounded-full bg-gradient-to-r from-pink-500/10 to-purple-500/10 opacity-20 blur-[100px] animate-pulse delay-1000"></div>
       <div className="absolute left-0 bottom-1/4 h-[250px] w-[250px] rounded-full bg-gradient-to-r from-green-500/10 to-emerald-500/10 opacity-25 blur-[80px] animate-pulse delay-2000"></div>
       
-      {/* Aceternity-style streaks - exact copy from landing page */}
-      <div className="absolute inset-0 overflow-hidden">
+      {/* Aceternity-style streaks - now visible */}
+      <div className="absolute inset-0">
         {/* Vertical streaks */}
-        <div className="absolute left-1/4 top-0 h-full w-[1px] bg-gradient-to-b from-transparent via-purple-500/30 to-transparent animate-pulse"></div>
-        <div className="absolute left-1/2 top-0 h-full w-[1px] bg-gradient-to-b from-transparent via-blue-500/30 to-transparent animate-pulse delay-1000"></div>
-        <div className="absolute left-3/4 top-0 h-full w-[1px] bg-gradient-to-b from-transparent via-cyan-500/30 to-transparent animate-pulse delay-2000"></div>
+        <div className="absolute left-1/4 top-0 h-full w-[2px] bg-gradient-to-b from-transparent via-purple-500/60 to-transparent animate-pulse"></div>
+        <div className="absolute left-1/2 top-0 h-full w-[2px] bg-gradient-to-b from-transparent via-blue-500/60 to-transparent animate-pulse delay-1000"></div>
+        <div className="absolute left-3/4 top-0 h-full w-[2px] bg-gradient-to-b from-transparent via-cyan-500/60 to-transparent animate-pulse delay-2000"></div>
         
         {/* Diagonal streaks */}
-        <div className="absolute left-1/3 top-0 h-[200px] w-[1px] bg-gradient-to-b from-transparent via-purple-500/20 to-transparent transform rotate-45 origin-top animate-pulse delay-500"></div>
-        <div className="absolute right-1/3 top-0 h-[200px] w-[1px] bg-gradient-to-b from-transparent via-blue-500/20 to-transparent transform -rotate-45 origin-top animate-pulse delay-1500"></div>
+        <div className="absolute left-1/3 top-0 h-[300px] w-[2px] bg-gradient-to-b from-transparent via-purple-500/50 to-transparent transform rotate-45 origin-top animate-pulse delay-500"></div>
+        <div className="absolute right-1/3 top-0 h-[300px] w-[2px] bg-gradient-to-b from-transparent via-blue-500/50 to-transparent transform -rotate-45 origin-top animate-pulse delay-500"></div>
         
         {/* Horizontal streaks */}
-        <div className="absolute left-0 top-1/4 w-full h-[1px] bg-gradient-to-r from-transparent via-purple-500/20 to-transparent animate-pulse delay-750"></div>
-        <div className="absolute left-0 top-3/4 w-full h-[1px] bg-gradient-to-r from-transparent via-blue-500/20 to-transparent animate-pulse delay-1250"></div>
+        <div className="absolute left-0 top-1/4 w-full h-[2px] bg-gradient-to-r from-transparent via-purple-500/50 to-transparent animate-pulse delay-750"></div>
+        <div className="absolute left-0 top-3/4 w-full h-[2px] bg-gradient-to-b from-transparent via-blue-500/50 to-transparent animate-pulse delay-1250"></div>
       </div>
 
       {/* Floating premium elements */}
