@@ -1,9 +1,29 @@
+"use client";
+
+import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { GlassCard, GlassButton, AnimatedBackground } from "@/components/ui/aceternity-ui";
 
+interface ContactFormData {
+  firstName: string;
+  lastName: string;
+  email: string;
+  subject: string;
+  message: string;
+}
+
 export default function Contact() {
+  const { register, handleSubmit, formState: { errors }, reset } = useForm<ContactFormData>();
+
+  const onSubmit = (data: ContactFormData) => {
+    console.log('Form submitted:', data);
+    // Here you would typically send the data to your backend
+    alert('Message sent successfully!');
+    reset();
+  };
+
   return (
     <div className="min-h-screen bg-background relative">
       {/* Animated Background */}
@@ -40,21 +60,25 @@ export default function Contact() {
                 </div>
               </div>
               
-              <form className="space-y-6">
+              <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">First Name</label>
                     <Input 
+                      {...register("firstName", { required: "First name is required" })}
                       className="bg-white/20 dark:bg-slate-800/30 border border-white/30 dark:border-slate-700/30 backdrop-blur-xl text-foreground placeholder:text-muted-foreground/60 focus:border-cyan-500/50 focus:ring-cyan-500/20 transition-all duration-300" 
                       placeholder="John"
                     />
+                    {errors.firstName && <p className="text-red-500 text-sm mt-1">{errors.firstName.message}</p>}
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">Last Name</label>
                     <Input 
+                      {...register("lastName", { required: "Last name is required" })}
                       className="bg-white/20 dark:bg-slate-800/30 border border-white/30 dark:border-slate-700/30 backdrop-blur-xl text-foreground placeholder:text-muted-foreground/60 focus:border-cyan-500/50 focus:ring-cyan-500/20 transition-all duration-300" 
                       placeholder="Doe"
                     />
+                    {errors.lastName && <p className="text-red-500 text-sm mt-1">{errors.lastName.message}</p>}
                   </div>
                 </div>
                 
@@ -62,28 +86,43 @@ export default function Contact() {
                   <label className="block text-sm font-medium text-foreground mb-2">Email</label>
                   <Input 
                     type="email" 
+                    {...register("email", { 
+                      required: "Email is required",
+                      pattern: {
+                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                        message: "Invalid email address"
+                      }
+                    })}
                     className="bg-white/20 dark:bg-slate-800/30 border border-white/30 dark:border-slate-700/30 backdrop-blur-xl text-foreground placeholder:text-muted-foreground/60 focus:border-cyan-500/50 focus:ring-cyan-500/20 transition-all duration-300" 
                     placeholder="john@example.com"
                   />
+                  {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>}
                 </div>
                 
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">Subject</label>
-                  <select className="w-full bg-white/20 dark:bg-slate-800/30 border border-white/30 dark:border-slate-700/30 backdrop-blur-xl text-foreground rounded-lg px-3 py-2 focus:border-cyan-500/50 focus:ring-cyan-500/20 transition-all duration-300">
-                    <option>General Inquiry</option>
-                    <option>Project Discussion</option>
-                    <option>Partnership</option>
-                    <option>Support</option>
+                  <select 
+                    {...register("subject", { required: "Subject is required" })}
+                    className="w-full bg-white/20 dark:bg-slate-800/30 border border-white/30 dark:border-slate-700/30 backdrop-blur-xl text-foreground rounded-lg px-3 py-2 focus:border-cyan-500/50 focus:ring-cyan-500/20 transition-all duration-300"
+                  >
+                    <option value="">Select a subject</option>
+                    <option value="General Inquiry">General Inquiry</option>
+                    <option value="Project Discussion">Project Discussion</option>
+                    <option value="Partnership">Partnership</option>
+                    <option value="Support">Support</option>
                   </select>
+                  {errors.subject && <p className="text-red-500 text-sm mt-1">{errors.subject.message}</p>}
                 </div>
                 
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">Message</label>
                   <Textarea 
                     rows={6}
+                    {...register("message", { required: "Message is required", minLength: { value: 10, message: "Message must be at least 10 characters" } })}
                     className="bg-white/20 dark:bg-slate-800/30 border border-white/30 dark:border-slate-700/30 backdrop-blur-xl text-foreground placeholder:text-muted-foreground/60 focus:border-cyan-500/50 focus:ring-cyan-500/20 transition-all duration-300 resize-none" 
                     placeholder="Tell us about your project..."
                   />
+                  {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message.message}</p>}
                 </div>
                 
                 <GlassButton type="submit" className="w-full py-4 text-lg font-semibold bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 shadow-2xl hover:shadow-cyan-500/25">

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { GlassCard, GlassButton, AnimatedBackground } from "@/components/ui/aceternity-ui";
+import AboutContent from "@/content/about.mdx";
 
 export default function About() {
   return (
@@ -11,19 +12,26 @@ export default function About() {
       <div className="container mx-auto px-4 py-32 relative z-10">
         {/* Hero Section */}
         <div className="text-center mb-24">
-          <span className="inline-block px-4 py-2 bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-full text-sm font-medium text-blue-600 dark:text-blue-400 mb-6">
-            ✨ About Us
+          <span className="inline-block px-4 py-2 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-full text-sm font-medium text-purple-600 dark:text-purple-400 mb-6">
+            🚀 About Us
           </span>
           <h1 className="text-6xl md:text-7xl font-bold text-foreground mb-8 leading-tight">
-            About{" "}
-            <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent">
-              kirna.dev
+            Building the{" "}
+            <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+              Future
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            We're building the future of web development, one component at a time.
+            Discover our mission, values, and the technology stack that powers our innovative solutions.
           </p>
         </div>
+
+        {/* MDX Content */}
+        <GlassCard className="p-10 mb-16">
+          <div className="prose prose-lg dark:prose-invert max-w-none">
+            <AboutContent />
+          </div>
+        </GlassCard>
 
         {/* Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center mb-32">
