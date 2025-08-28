@@ -14,78 +14,20 @@ export const AnimatedBackground = () => {
       <div className="absolute right-0 top-1/4 h-[300px] w-[300px] rounded-full bg-gradient-to-r from-pink-500/10 to-purple-500/10 opacity-20 blur-[100px] animate-pulse delay-1000"></div>
       <div className="absolute left-0 bottom-1/4 h-[250px] w-[250px] rounded-full bg-gradient-to-r from-green-500/10 to-emerald-500/10 opacity-25 blur-[80px] animate-pulse delay-2000"></div>
       
-      {/* Simple test streaks - make them very visible */}
+      {/* Aceternity-style streaks - exact copy from landing page */}
       <div className="absolute inset-0 overflow-hidden">
-        <motion.div
-          className="absolute w-[4px] h-[200px] bg-red-500"
-          animate={{
-            y: [-200, 600],
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-          style={{
-            left: '20%',
-            top: 0,
-            zIndex: 50,
-          }}
-        />
+        {/* Vertical streaks */}
+        <div className="absolute left-1/4 top-0 h-full w-[1px] bg-gradient-to-b from-transparent via-purple-500/30 to-transparent animate-pulse"></div>
+        <div className="absolute left-1/2 top-0 h-full w-[1px] bg-gradient-to-b from-transparent via-blue-500/30 to-transparent animate-pulse delay-1000"></div>
+        <div className="absolute left-3/4 top-0 h-full w-[1px] bg-gradient-to-b from-transparent via-cyan-500/30 to-transparent animate-pulse delay-2000"></div>
         
-        <motion.div
-          className="absolute w-[4px] h-[200px] bg-blue-500"
-          animate={{
-            y: [-200, 600],
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            delay: 1,
-            ease: "linear"
-          }}
-          style={{
-            left: '40%',
-            top: 0,
-            zIndex: 50,
-          }}
-        />
+        {/* Diagonal streaks */}
+        <div className="absolute left-1/3 top-0 h-[200px] w-[1px] bg-gradient-to-b from-transparent via-purple-500/20 to-transparent transform rotate-45 origin-top animate-pulse delay-500"></div>
+        <div className="absolute right-1/3 top-0 h-[200px] w-[1px] bg-gradient-to-b from-transparent via-blue-500/20 to-transparent transform -rotate-45 origin-top animate-pulse delay-1500"></div>
         
-        <motion.div
-          className="absolute w-[4px] h-[200px] bg-green-500"
-          animate={{
-            y: [-200, 600],
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            delay: 2,
-            ease: "linear"
-          }}
-          style={{
-            left: '60%',
-            top: 0,
-            zIndex: 50,
-          }}
-        />
-        
-        <motion.div
-          className="absolute w-[4px] h-[200px] bg-purple-500"
-          animate={{
-            y: [-200, 600],
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            delay: 3,
-            ease: "linear"
-          }}
-          style={{
-            left: '80%',
-            top: 0,
-            zIndex: 50,
-          }}
-        />
+        {/* Horizontal streaks */}
+        <div className="absolute left-0 top-1/4 w-full h-[1px] bg-gradient-to-r from-transparent via-purple-500/20 to-transparent animate-pulse delay-750"></div>
+        <div className="absolute left-0 top-3/4 w-full h-[1px] bg-gradient-to-r from-transparent via-blue-500/20 to-transparent animate-pulse delay-1250"></div>
       </div>
 
       {/* Floating premium elements */}
