@@ -14,76 +14,78 @@ export const AnimatedBackground = () => {
       <div className="absolute right-0 top-1/4 h-[300px] w-[300px] rounded-full bg-gradient-to-r from-pink-500/10 to-purple-500/10 opacity-20 blur-[100px] animate-pulse delay-1000"></div>
       <div className="absolute left-0 bottom-1/4 h-[250px] w-[250px] rounded-full bg-gradient-to-r from-green-500/10 to-emerald-500/10 opacity-25 blur-[80px] animate-pulse delay-2000"></div>
       
-      {/* Premium animated streaks - flowing rain-like motion */}
+      {/* Simple test streaks - make them very visible */}
       <div className="absolute inset-0 overflow-hidden">
-        {[...Array(8)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-[3px] h-[300px] bg-gradient-to-b from-transparent via-purple-500/80 to-transparent"
-            animate={{
-              y: [-300, 800],
-              opacity: [0, 1, 0],
-            }}
-            transition={{
-              duration: 6 + (i * 1),
-              repeat: Infinity,
-              delay: i * 0.5,
-              ease: "linear"
-            }}
-            style={{
-              left: `${(i * 12) + 5}%`,
-              top: 0,
-              zIndex: 10,
-            }}
-          />
-        ))}
+        <motion.div
+          className="absolute w-[4px] h-[200px] bg-red-500"
+          animate={{
+            y: [-200, 600],
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+          style={{
+            left: '20%',
+            top: 0,
+            zIndex: 50,
+          }}
+        />
         
-        {/* Additional diagonal streaks with flowing motion */}
-        {[...Array(6)].map((_, i) => (
-          <motion.div
-            key={`diagonal-${i}`}
-            className="absolute w-[2px] h-[400px] bg-gradient-to-b from-transparent via-blue-500/70 to-transparent"
-            animate={{
-              y: [-400, 800],
-              opacity: [0, 0.9, 0],
-            }}
-            transition={{
-              duration: 8 + (i * 1),
-              repeat: Infinity,
-              delay: i * 0.8,
-              ease: "linear"
-            }}
-            style={{
-              left: `${(i * 20) + 15}%`,
-              top: 0,
-              transform: `rotate(${30 + (i * 15)}deg)`,
-              zIndex: 10,
-            }}
-          />
-        ))}
+        <motion.div
+          className="absolute w-[4px] h-[200px] bg-blue-500"
+          animate={{
+            y: [-200, 600],
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            delay: 1,
+            ease: "linear"
+          }}
+          style={{
+            left: '40%',
+            top: 0,
+            zIndex: 50,
+          }}
+        />
         
-        {/* Vertical streaks with continuous flow */}
-        {[...Array(5)].map((_, i) => (
-          <motion.div
-            key={`vertical-${i}`}
-            className="absolute w-[2px] h-[600px] bg-gradient-to-b from-transparent via-cyan-500/60 to-transparent"
-            animate={{
-              y: [-600, 800],
-              opacity: [0, 0.8, 0],
-            }}
-            transition={{
-              duration: 10 + (i * 1.5),
-              repeat: Infinity,
-              delay: i * 1.2,
-              ease: "linear"
-            }}
-            style={{
-              left: `${(i * 25) + 5}%`,
-              top: 0,
-              zIndex: 10,
-            }}
-          />
-        ))}
+        <motion.div
+          className="absolute w-[4px] h-[200px] bg-green-500"
+          animate={{
+            y: [-200, 600],
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            delay: 2,
+            ease: "linear"
+          }}
+          style={{
+            left: '60%',
+            top: 0,
+            zIndex: 50,
+          }}
+        />
+        
+        <motion.div
+          className="absolute w-[4px] h-[200px] bg-purple-500"
+          animate={{
+            y: [-200, 600],
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            delay: 3,
+            ease: "linear"
+          }}
+          style={{
+            left: '80%',
+            top: 0,
+            zIndex: 50,
+          }}
+        />
       </div>
 
       {/* Floating premium elements */}
